@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialEase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>SocialEase</h1>
+            </div>
+            <ul>
+                <li><a href="#" onclick="showRegistration()">Register</a></li>
+                <li><a href="#" onclick="showLogin()">Login</a></li>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content-area">
+            <!-- Registration Section -->
+            <section id="registrationSection" class="page">
+                <h2>User Registration</h2>
+                <form id="registrationForm">
+                    <label for="name">Name:</label><input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label><input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label><input type="password" id="password" name="password" required>
+                    <label for="confirmPassword">Confirm Password:</label><input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+            </section>
+
+            <!-- Login Section -->
+            <section id="loginSection" class="page" style="display: none;">
+                <h2>User Login</h2>
+                <form id="loginForm">
+                    <label for="loginEmail">Email:</label><input type="email" id="loginEmail" name="email" required>
+                    <label for="loginPassword">Password:</label><input type="password" id="loginPassword" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="showRegistration()">Sign up here</a></p>
+            </section>
+
+            <!-- Home Section -->
+            <section id="homeSection" class="page" style="display: none;">
+                <div class="home-container">
+                    <h2>Welcome to SocialEase</h2>
+                    <p>We’re so glad you’re here. SocialEase is designed with you in mind—to help you build confidence, overcome social anxiety, and thrive in social situations. Whether you're just starting your journey or looking to enhance your skills, you're in the right place.
+
+Take it one step at a time, and know that with every small effort, you’re making progress. Explore our tools, CBT exercises, and community to support your growth, and remember: you’re never alone in this journey.
+
+Welcome to your path toward greater confidence and peace of mind. We're excited to support you every step of the way!</p>
+                    <h3>Select a CBT Exercise to Get Started</h3>
+                    <div class="nav-buttons">
+                        <button onclick="showBehavioralActivation()">Behavioral Activation</button>
+                        <button onclick="showExposureTherapy()">Exposure Therapy</button>
+                        <button onclick="showStressReduction()">Stress Reduction Techniques</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Behavioral Activation Section -->
+            <section id="behavioralActivationSection" class="page" style="display: none;">
+                <h2>Behavioral Activation</h2>
+                <h3>Identifying Avoidance Behavior</h3>
+                <p>Identifying avoidance behavior is the first step in overcoming social anxiety. Avoidance is when you actively stay away from situations that make you feel uncomfortable, anxious, or fearful. These situations might include social gatherings, speaking up in meetings, or interacting with strangers. While avoidance can temporarily reduce anxiety, it actually reinforces the fear and prevents you from building confidence.
+
+In this exercise, we’ll help you recognize the moments when you avoid situations that could help you face your fears and develop stronger social skills. The goal is to identify these behaviors, understand why they occur, and begin to challenge them. By facing these situations gradually, you’ll learn that you can manage discomfort and that the anxiety often decreases over time.
+
+Start by reflecting on situations where you tend to avoid interactions or experiences. Write them down, and let’s begin exploring ways to approach them step by step.</p>
+                <h3>Set Goals</h3>
+                <p>Setting clear, achievable goals is a powerful tool in overcoming social anxiety. When you're feeling overwhelmed by social situations, having a structured plan can help break down the process into manageable steps. Goal-setting allows you to focus on what you can do today, rather than being paralyzed by fear or uncertainty about the future.
+
+In this exercise, we’ll guide you through setting specific, measurable, and realistic goals that are tailored to your unique needs and comfort level. These goals will help you gradually expose yourself to social situations in a way that feels safe and manageable. By setting small, incremental goals, you’ll be able to track your progress and celebrate each victory along the way.
+
+For example, a goal might be to say hello to a colleague or to attend a small social gathering. Over time, you can increase the difficulty of these goals as you build confidence. The key is to start small and work at your own pace.
+
+Begin by thinking about one area where you'd like to improve your social confidence. What small step can you take today that will move you closer to that goal? Write it down and take action.</p>
+                <h3>Create a Schedule</h3>
+                <p>Creating a schedule is an essential part of managing social anxiety and ensuring you stay on track with your goals. A structured schedule helps you prioritize your tasks, plan ahead, and gradually incorporate social activities into your routine. By organizing your time and setting aside specific moments for practicing social interactions, you’ll build consistency and reduce the overwhelming feeling that can come with uncertainty.
+
+In this exercise, we’ll help you create a personalized schedule that includes small, manageable steps toward your social goals. Whether it’s setting aside time to practice relaxation techniques, attending a social event, or simply engaging in a conversation, scheduling these activities ensures that they become a regular part of your life.
+
+Start by identifying the social activities you’d like to focus on, and then allocate specific days and times to work on them. Be sure to start with activities that feel manageable, and don’t forget to include breaks and self-care to prevent burnout. Gradually, as you build confidence, you can challenge yourself with more complex tasks.
+
+By creating a schedule, you’ll feel more in control and prepared to face your social goals, one step at a time. Consistency is key, and with each small success, you’ll be building the skills you need to overcome your social anxiety.</p>
+                <button onclick="showHome()">Back to Home</button>
+            </section>
+
+            <!-- Exposure Therapy Section -->
+            <section id="exposureTherapySection" class="page" style="display: none;">
+                <h2>Exposure Therapy</h2>
+                <h3>Create a Hierarchy</h3>
+                <p>Creating a hierarchy is an important strategy for managing social anxiety by organizing situations from least to most anxiety-provoking. This process allows you to gradually face your fears, starting with less intimidating scenarios and working your way up. By breaking down overwhelming situations into smaller, more manageable steps, you’ll build confidence and reduce anxiety over time.
+
+In this exercise, we’ll help you create a list of social situations that trigger your anxiety, ranking them from the least distressing to the most challenging. This could include activities such as initiating small talk with a colleague, attending a group gathering, or speaking in front of a large audience. The goal is to start at the bottom of your hierarchy, taking one step at a time.
+
+By confronting these situations in a gradual and controlled way, you’ll prove to yourself that you can handle discomfort and that your fears often aren’t as threatening as they seem. Begin by identifying your fear triggers and placing them in a list. We’ll work with you to tackle them one by one.</p>
+                <h3>Gradual Exposure</h3>
+                <p>Gradual exposure involves facing your fears in a structured and controlled way, starting with situations that cause the least anxiety and slowly moving to more challenging ones. This technique is based on the idea that the more you expose yourself to something that causes fear, the less power it will have over time.
+
+In this exercise, we’ll guide you through a series of steps to gradually expose yourself to social situations. By using the hierarchy you’ve created, we’ll take small, manageable actions that will allow you to face your fears without feeling overwhelmed. You’ll start with easier tasks and gradually work your way up to more difficult ones, always progressing at your own pace.
+
+The key is to take it slow. As you build tolerance to each situation, you’ll feel more comfortable and confident in your ability to handle future challenges. This process will help you desensitize yourself to anxiety-provoking situations and reduce their impact on your daily life.</p>
+                <h3>Gradually Building Tolerance</h3>
+                <p>Gradually building tolerance is about learning to remain calm and focused in situations that provoke anxiety. It’s a process of getting used to discomfort and realizing that you are capable of handling it. By exposing yourself to more challenging situations over time, you can increase your tolerance for anxiety and develop stronger coping skills.
+
+In this exercise, you’ll focus on facing increasingly difficult social situations in a gradual way, helping you expand your comfort zone. With each exposure, your anxiety levels will decrease, and you’ll become more resilient in handling future challenges. This approach allows you to grow your tolerance without overwhelming yourself.
+
+Start with manageable steps and slowly increase the difficulty as you become more confident. The goal is to train your mind and body to tolerate anxiety and recognize that the discomfort won’t last forever. With time, you’ll notice that what once felt impossible becomes easier and more manageable.</p>
+                <button onclick="showHome()">Back to Home</button>
+            </section>
+
+            <!-- Stress Reduction Section -->
+            <section id="stressReductionSection" class="page" style="display: none;">
+                <h2>Stress Reduction Techniques</h2>
+                <h3>Progressive Muscle Relaxation</h3>
+                <p>Progressive Muscle Relaxation (PMR) is a technique used to help you reduce physical tension and manage stress. This method involves systematically tensing and relaxing different muscle groups in your body, allowing you to become more aware of physical sensations and learn to release tension. When you experience anxiety, your muscles tend to tighten, which can increase feelings of stress. PMR helps break this cycle by teaching your body to relax.
+
+In this exercise, we’ll guide you through a series of muscle tension and relaxation sequences, focusing on areas of your body that often hold stress, such as your shoulders, neck, and hands. By practicing regularly, you’ll learn to recognize when your body is holding tension and how to release it, which can significantly reduce anxiety in social situations.
+
+Take a few minutes each day to practice PMR. Over time, it will become a useful tool to calm your body before or during stressful social interactions. This technique not only helps reduce anxiety but also improves your overall sense of well-being.</p>
+                <h3>Breathing Exercises</h3>
+                <p>Breathing exercises are a simple but powerful way to reduce anxiety and regain control in stressful situations. When you’re anxious, your breathing becomes shallow and rapid, which can increase feelings of panic. By focusing on slow, deep breaths, you activate your body’s relaxation response and help calm your nervous system.
+
+In this exercise, we’ll guide you through several breathing techniques, such as diaphragmatic breathing, box breathing, and 4-7-8 breathing. Each technique will help you slow down your breath, increase oxygen flow, and calm both your mind and body. Breathing exercises can be done anytime and anywhere, making them a portable tool for managing anxiety in social situations.
+
+Start by practicing breathing exercises for a few minutes each day. As you become more comfortable, use these techniques when you feel anxious or before entering a social situation. The more you practice, the more effective they’ll become in reducing your anxiety.</p>
+                <button onclick="showHome()">Back to Home</button>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
